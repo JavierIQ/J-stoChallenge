@@ -3,9 +3,11 @@ package com.javieriq.justochallenge.ui.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.javieriq.justochallenge.R
+import com.javieriq.justochallenge.data.model.RandomUserModel
 import com.javieriq.justochallenge.databinding.ActivityMainBinding
 import com.javieriq.justochallenge.ui.viewmodel.UserViewModel
 
@@ -20,25 +22,37 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         userViewModel.onCreate()
+        listeners()
 
         userViewModel.userModel.observe(this, Observer { currentUser ->
             if (currentUser != null) {
-                val gender = currentUser.results[0].gender
-                val lastName = currentUser.results[0].name.last
-                val streetName = currentUser.results[0].location.street.name
-                val phone = currentUser.results[0].phone
-                val email = currentUser.results[0].email
-
-                Log.d("DEBUGAPI", gender)
-                Log.d("DEBUGAPI", lastName)
-                Log.d("DEBUGAPI", streetName)
-                Log.d("DEBUGAPI", phone)
-                Log.d("DEBUGAPI", email)
+                render(currentUser)
+            }else{
             }
         })
 
-        binding.buttonAddUser.setOnClickListener {
+        userViewModel.toastMessage.observe(this, Observer { message ->
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        })
+
+    }
+
+    private fun render(user: RandomUserModel) {
+        val name = user.results[0].name.first
+        val age = user.results[0].dob.age
+        val email = user.results[0].email
+        val phone = user.results[0].phone
+
+        binding.tvName.text = "Name ${name}"
+        binding.tvAge.text = "Name ${age}"
+        binding.tvEmail.text = "Name ${email}"
+        binding.tvPhone.text = "Name ${phone}"
+    }
+
+    private fun listeners(){
+        binding.btnAdd.setOnClickListener {
             userViewModel.onCreate()
         }
     }
+
 }

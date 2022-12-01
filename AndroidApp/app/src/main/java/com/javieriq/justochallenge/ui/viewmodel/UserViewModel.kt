@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class UserViewModel: ViewModel() {
 
     val userModel = MutableLiveData<RandomUserModel?>()
-    val showMessage = MutableLiveData<String>()
+    val toastMessage = MutableLiveData<String>()
 
     var getRandomUserUseCase = GetRandomUserUseCase()
 
@@ -20,7 +20,7 @@ class UserViewModel: ViewModel() {
             if (result != null){
                 userModel.postValue(result)
             }else{
-                showMessage.postValue("No data to show")
+                toastMessage.postValue("User does not exist")
             }
         }
     }
