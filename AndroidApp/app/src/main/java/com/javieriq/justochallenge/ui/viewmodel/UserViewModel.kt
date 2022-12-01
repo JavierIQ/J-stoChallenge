@@ -1,5 +1,6 @@
 package com.javieriq.justochallenge.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,7 +11,6 @@ import kotlinx.coroutines.launch
 class UserViewModel: ViewModel() {
 
     val userModel = MutableLiveData<RandomUserModel?>()
-    val toastMessage = MutableLiveData<String>()
 
     var getRandomUserUseCase = GetRandomUserUseCase()
 
@@ -20,7 +20,7 @@ class UserViewModel: ViewModel() {
             if (result != null){
                 userModel.postValue(result)
             }else{
-                toastMessage.postValue("User does not exist")
+                Log.d("DATA_API","User does not exist")
             }
         }
     }

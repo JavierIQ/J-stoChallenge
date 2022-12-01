@@ -1,5 +1,6 @@
 package com.javieriq.justochallenge.ui.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
+import com.google.gson.Gson
 import com.javieriq.justochallenge.R
 import com.javieriq.justochallenge.data.model.RandomUserModel
 import com.javieriq.justochallenge.databinding.ActivityMainBinding
@@ -28,13 +30,15 @@ class MainActivity : AppCompatActivity() {
         userViewModel.userModel.observe(this, Observer { currentUser ->
             if (currentUser != null && currentUser.results.isNotEmpty()) {
                 render(currentUser)
+                binding.btnMoreInfo.setOnClickListener {
+                    val gson = Gson()
+                    val intent = Intent(this, DetailUserActivity::class.java)
+                    intent.putExtra("identifier", gson.toJson(currentUser))
+                    startActivity(intent)
+                }
             }else{
 
             }
-        })
-
-        userViewModel.toastMessage.observe(this, Observer { message ->
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         })
 
     }
@@ -60,16 +64,11 @@ class MainActivity : AppCompatActivity() {
         binding.tvUserCountry.text = country
         binding.tvUserPhone.text = phone
 
-
     }
 
     private fun listeners(){
         binding.btnAdd.setOnClickListener {
             userViewModel.onCreate()
-        }
-
-        binding.btnMoreInfo.setOnClickListener {
-
         }
     }
 
