@@ -10,3 +10,10 @@ Application to manage users
 ## End Point RanDomUser
 
 - https://randomuser.me/api/
+
+## Test environment
+
+Virtual machine: 
+- Android Api 31 
+- Pixel 4a
+
