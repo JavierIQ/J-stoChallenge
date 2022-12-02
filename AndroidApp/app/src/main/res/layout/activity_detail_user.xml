@@ -5,10 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:background="@color/black"
     tools:context=".ui.view.DetailUserActivity">
 
+    <RelativeLayout
+        android:layout_marginTop="60dp"
+        android:background="@drawable/top_corners_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <LinearLayout
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -31,12 +38,14 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/TextBodyTitle"
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Javier" />
 
             <TextView
+                style="@style/TextBodyTitle"
                 android:id="@+id/tvFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,6 +53,7 @@
                 tools:text="Iñiguez" />
 
             <TextView
+                style="@style/TextBodyTitle"
                 android:id="@+id/tvLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,6 +74,7 @@
                 android:padding="8dp">
 
                 <TextView
+                    style="@style/TextBodyTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Personal Info: " />
@@ -75,11 +86,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Email: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -92,11 +105,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Phone: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserPhone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -109,11 +124,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Age: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -126,11 +143,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Gender: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserGenre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -154,6 +173,7 @@
                 android:padding="8dp">
 
                 <TextView
+                    style="@style/TextBodyTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Location Info: " />
@@ -164,11 +184,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Country: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserCountry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -181,11 +203,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="State: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserState"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -198,11 +222,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="City: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserCity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,6 +241,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time Zone: " />
@@ -232,6 +259,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
@@ -241,6 +269,7 @@
                 android:padding="8dp">
 
                 <TextView
+                    style="@style/TextBodyTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Session Info: " />
@@ -251,11 +280,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Username: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUsername"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -268,11 +299,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ID: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserID"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -285,11 +318,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/TextBodyTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="UUID: " />
 
                     <TextView
+                        style="@style/TextBody"
                         android:id="@+id/tvUserUUID"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -300,6 +335,8 @@
         </androidx.cardview.widget.CardView>
 
         <Button
+            android:backgroundTint="@color/backgrounfButton"
+            android:background="@drawable/rounded_button"
             android:id="@+id/btnReturnMain"
             android:layout_marginTop="16dp"
             android:text="Return"

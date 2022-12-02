@@ -2,152 +2,193 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="20dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
-
-            <ImageView
-                android:id="@+id/imgVProfile"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/imgVProfile"
-                app:layout_constraintStart_toStartOf="@+id/imgVProfile"
-                app:layout_constraintTop_toBottomOf="@+id/imgVProfile">
-
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Javier" />
-
-                <TextView
-                    android:layout_marginHorizontal="4dp"
-                    android:id="@+id/tvFirstName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Iñiguez" />
-
-                <TextView
-                    android:id="@+id/tvLastName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Quezada" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Email: " />
-
-                    <TextView
-                        android:id="@+id/tvUserEmail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="javier.iniguez2498@gmail.com" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Phone: " />
-
-                    <TextView
-                        android:id="@+id/tvUserPhone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="722 341 5222" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Country: " />
-
-                    <TextView
-                        android:id="@+id/tvUserCountry"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="Mexico" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btnMoreInfo"
-                android:textAllCaps="false"
-                android:text="More Info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD"
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="Hello!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="This is Random User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextBody"
+            android:text="This application allows you to view information from different users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginVertical="8dp"
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgVProfile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/imgVProfile"
+                    app:layout_constraintStart_toStartOf="@+id/imgVProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/imgVProfile">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Javier" />
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:layout_marginHorizontal="4dp"
+                        android:id="@+id/tvFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Iñiguez" />
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:id="@+id/tvLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Quezada" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextBodyTitle"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextBodyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email: " />
+
+                        <TextView
+                            style="@style/TextBody"
+                            android:id="@+id/tvUserEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="javier.iniguez2498@gmail.com" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextBodyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone: " />
+
+                        <TextView
+                            style="@style/TextBody"
+                            android:id="@+id/tvUserPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="722 341 5222" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextBodyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country: " />
+
+                        <TextView
+                            style="@style/TextBody"
+                            android:id="@+id/tvUserCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Mexico" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/backgrounfButton"
+                    android:background="@drawable/rounded_button"
+                    android:id="@+id/btnMoreInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="More Info"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            style="@style/Button.Black"
+            android:background="@drawable/rounded_button"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="See another user" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
