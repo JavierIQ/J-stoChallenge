@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.javieriq.justochallenge.R
+import com.javieriq.justochallenge.data.model.InfoModel
 import com.javieriq.justochallenge.data.model.RandomUserModel
 import com.javieriq.justochallenge.databinding.ActivityMainBinding
 import com.javieriq.justochallenge.ui.viewmodel.UserViewModel
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }else{
-
+                Toast.makeText(this,"Next user does not exist", Toast.LENGTH_SHORT).show()
             }
         })
 
